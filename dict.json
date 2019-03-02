@@ -1,0 +1,71 @@
+{
+  "Name": "Mathematics",
+  "Themes": [
+    {
+      "Name": "Сложение",
+      "Words": [
+        {
+          "he": "חִיבּוּר",
+          "heNoNikudots": "חיבור",
+          "ru": "сложение",
+          "transcription": "",
+          "en": ""
+        },
+        {
+          "he": "לְחַבֵּר",
+          "heNoNikudots": "לחבר",
+          "ru": "сложить",
+          "transcription": "",
+          "en": ""
+        },
+        {
+          "he": "מְחוּבָּר",
+          "heNoNikudots": "מחובר",
+          "ru": "слагаемое",
+          "transcription": "",
+          "en": ""
+        },
+        {
+          "he": "סכוּם, סָך",
+          "heNoNikudots": "סכום, סך",
+          "ru": "сумма",
+          "transcription": "",
+          "en": ""
+        }
+      ]
+    },
+    {
+      "Name": "Вычитание",
+      "Words": [
+        {
+          "he": "חִיסוּר",
+          "heNoNikudots": "חיסור",
+          "ru": "вычитание",
+          "transcription": "",
+          "en": ""
+        },
+        {
+          "he": "מְחַסֵר",
+          "heNoNikudots": "מחסר",
+          "ru": "вычитаемое",
+          "transcription": "",
+          "en": ""
+        },
+        {
+          "he": "הֶפרֵש",
+          "heNoNikudots": "הפרש",
+          "ru": "разность",
+          "transcription": "",
+          "en": ""
+        },
+        {
+          "he": "הַפְחֵת",
+          "heNoNikudots": "הפחת",
+          "ru": "отними",
+          "transcription": "",
+          "en": ""
+        }
+      ]
+    }
+  ]
+}
