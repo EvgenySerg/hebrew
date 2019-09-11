@@ -23,15 +23,15 @@ func (man *Manager)StartQuiz(quiz *Quiz){
 	for learned!= scoreTableCount{
 		nextWord:=quiz.NextWord()
 		scu, isCorrect := man.ProcessHeToRuWord(nextWord)
-		percentage := man.CurrentCorrectCount/man.DesiredCorrectCount
+		percentage := float32(man.CurrentCorrectCount)/float32(man.DesiredCorrectCount)
 		if percentage >= 1{
 			scu.IsLearned=true
 		}
 
 		if isCorrect{
-			fmt.Printf("Correct %d", percentage)
+			fmt.Printf("Correct %f", percentage)
 		} else {
-			fmt.Printf("Incorrect %d", percentage)
+			fmt.Printf("Incorrect %f", percentage)
 		}
 		learned=man.Quiz.GetLearnedWordCount()
 	}

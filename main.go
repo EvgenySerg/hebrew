@@ -10,30 +10,11 @@ import (
 
 func main() {
 	var dict models.Dict
-	dict.Name = "Mathematics"
-	dict.Themes = []*models.Theme{
-		{Name: "Сложение", Words: []*models.Word{
-			{Ru: "сложение", He: "חִיבּוּר", HeNoNikudots: "חיבור",},
-			{Ru: "сложить", He: "לְחַבֵּר", HeNoNikudots: "לחבר",},
-			{Ru: "слагаемое", He: "מְחוּבָּר", HeNoNikudots: "מחובר",},
-			{Ru: "сумма", He: "סכוּם, סָך", HeNoNikudots: "סכום, סך",},
-		},
-		},
-		{Name: "Вычитание", Words: []*models.Word{
-			{Ru: "вычитание", He: "חִיסוּר", HeNoNikudots: "חיסור",},
-			{Ru: "вычитаемое", He: "מְחַסֵר", HeNoNikudots: "מחסר",},
-			{Ru: "разность", He: "הֶפרֵש", HeNoNikudots: "הפרש",},
-			{Ru: "отними", He: "הַפְחֵת", HeNoNikudots: "הפחת",},
-		},
-		},
-
-	}
-
-
 
 	err := dict.Load("dict.json")
 	if err != nil {
 		fmt.Println(err.Error())
+		return
 	}
 
 
