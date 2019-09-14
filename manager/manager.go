@@ -14,6 +14,7 @@ type Manager struct {
 
 }
 
+
 func (man *Manager)StartQuiz(quiz *Quiz){
 
 	man.DesiredCorrectCount =10
@@ -36,6 +37,7 @@ func (man *Manager)StartQuiz(quiz *Quiz){
 		learned=man.Quiz.GetLearnedWordCount()
 	}
 }
+
 
 func (man *Manager) ProcessHeToRuWord(word *models.Word) (*models.ScoreUnit, bool){
 	answer:= man.ShowWord(word.He)

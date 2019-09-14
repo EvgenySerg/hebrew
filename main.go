@@ -1,35 +1,38 @@
 package main
 
 import (
+	ui2 "hebrew/ui"
 	"hebrew/models"
-	"fmt"
-	"os"
-	"bufio"
-	manager2 "hebrew/manager"
+	"hebrew/config"
+	"log"
 )
 
 func main() {
+
 	var dict models.Dict
 
 	err := dict.Load("dict.json")
 	if err != nil {
-		fmt.Println(err.Error())
-		return
+		log.Panic(err)
+	}
+
+	cfg,err:=config.LoadConfig("config.json")
+	if err!=nil{
+		log.Panic(err.Error())
 	}
 
 
-	wordSet := dict.GetAllWordsWordSet()
-	man:= manager2.Manager{DesiredCorrectCount:10}
-	quiz:=manager2.NewQuiz(wordSet)
-	man.StartQuiz(quiz)
+	ui:=ui2.NewUi(cfg, &dict)
+	ui.Show()
 
-	Fin()
+
+	//
+	//
+	//wordSet := dict.GetAllWordsWordSet()
+	//man:= manager2.Manager{DesiredCorrectCount:10}
+	//quiz:=manager2.NewQuiz(wordSet)
+	//man.StartQuiz(quiz)
+	//
+	//Fin()
 }
 
-
-func Fin(){
-	reader := bufio.NewReader(os.Stdin)
-	fmt.Print("Press any key to Exit")
-	text, _ := reader.ReadString('\n')
-	fmt.Println(text)
-}

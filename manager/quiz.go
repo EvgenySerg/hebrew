@@ -2,6 +2,13 @@ package manager
 
 import "hebrew/models"
 
+type Quiz struct {
+	currentIndex int
+	ScoreTable   []*models.ScoreUnit
+	WordSet      *models.WordSet
+}
+
+
 func NewQuiz(set *models.WordSet) *Quiz{
 	scoreTable := make ([]*models.ScoreUnit,0)
 	for _,word:=range set.Words{
@@ -16,11 +23,7 @@ func NewQuiz(set *models.WordSet) *Quiz{
 	return &Quiz {WordSet: set, currentIndex:0,ScoreTable:scoreTable}
 }
 
-type Quiz struct {
-	currentIndex int
-	ScoreTable   []*models.ScoreUnit
-	WordSet      *models.WordSet
-}
+
 
 func (q *Quiz) GetLearnedWordCount() int{
 	count := 0

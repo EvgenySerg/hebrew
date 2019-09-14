@@ -1,0 +1,7 @@
+{
+  "LearnedWordScore": 100,
+  "ScoreIncrementPerCorrectAnswer": 10,
+  "ScoreDecrementByWrongAnswer": 30,
+  "ScoreDecrementByDay": 5,
+  "ScoreDecrementKoefficientByRepetition": 0.7
+}

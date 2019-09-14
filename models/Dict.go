@@ -22,6 +22,7 @@ func (dict *Dict) GetAllWordsWordSet() *WordSet{
 }
 
 
+
 func (dict *Dict) Load(filename string)  error{
 	words, err :=  ioutil.ReadFile(filename)
 	if err!=nil{
@@ -32,7 +33,13 @@ func (dict *Dict) Load(filename string)  error{
 	if err!=nil{
 		return err
 	}
+
+
 	return  nil
+}
+
+func (dict *Dict)GetThemes() []*Theme{
+	return dict.Themes
 }
 
 
